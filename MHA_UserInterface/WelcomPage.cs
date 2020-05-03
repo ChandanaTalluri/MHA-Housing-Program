@@ -35,8 +35,8 @@ namespace MHA_UserInterface
             UserID = txt_userID.Text;
             UserPassword = txt_Password.Text;
             DatabaseName = "MHA";
-            ServerName = "HPASS-CART19-L";
-
+            ServerName = "DESKTOP-QQAP9VT\\SQLEXPRESS";
+            //ServerName = "HPASS-CART19-L";
             connectionString = "Data Source=" + ServerName + "; Initial Catalog=" + DatabaseName + "; User ID=" + UserID + "; Password=" + UserPassword + ";";
 
 

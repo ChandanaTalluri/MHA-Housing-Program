@@ -28,115 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.ins_Bulding = new System.Windows.Forms.Button();
-            this.ins_CensusTrack = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btn_insMortgager = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.ins_owner = new System.Windows.Forms.Button();
-            this.btn_Unit = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_Exit = new System.Windows.Forms.Button();
+            this.rbBuilding = new System.Windows.Forms.RadioButton();
+            this.rbCensus = new System.Windows.Forms.RadioButton();
+            this.rbMortgager = new System.Windows.Forms.RadioButton();
+            this.rbOwner = new System.Windows.Forms.RadioButton();
+            this.rbUnit = new System.Windows.Forms.RadioButton();
+            this.btnInsert = new System.Windows.Forms.Button();
+            this.insertGrid = new System.Windows.Forms.DataGridView();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.insertGrid)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(128, 88);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Add new Building details";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(128, 141);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Add New CensusTarck";
-            // 
-            // ins_Bulding
-            // 
-            this.ins_Bulding.Location = new System.Drawing.Point(297, 71);
-            this.ins_Bulding.Name = "ins_Bulding";
-            this.ins_Bulding.Size = new System.Drawing.Size(121, 30);
-            this.ins_Bulding.TabIndex = 2;
-            this.ins_Bulding.Text = "Insert_Building";
-            this.ins_Bulding.UseVisualStyleBackColor = true;
-            this.ins_Bulding.Click += new System.EventHandler(this.ins_Bulding_Click);
-            // 
-            // ins_CensusTrack
-            // 
-            this.ins_CensusTrack.Location = new System.Drawing.Point(297, 113);
-            this.ins_CensusTrack.Name = "ins_CensusTrack";
-            this.ins_CensusTrack.Size = new System.Drawing.Size(119, 41);
-            this.ins_CensusTrack.TabIndex = 3;
-            this.ins_CensusTrack.Text = "Insert_CensusTrack";
-            this.ins_CensusTrack.UseVisualStyleBackColor = true;
-            this.ins_CensusTrack.Click += new System.EventHandler(this.ins_CensusTrack_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(126, 210);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Add new Mortgager";
-            // 
-            // btn_insMortgager
-            // 
-            this.btn_insMortgager.Location = new System.Drawing.Point(297, 185);
-            this.btn_insMortgager.Name = "btn_insMortgager";
-            this.btn_insMortgager.Size = new System.Drawing.Size(121, 38);
-            this.btn_insMortgager.TabIndex = 5;
-            this.btn_insMortgager.Text = "Insert_Mortgager";
-            this.btn_insMortgager.UseVisualStyleBackColor = true;
-            this.btn_insMortgager.Click += new System.EventHandler(this.btn_insMortgager_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(128, 269);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Add New Owner";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // ins_owner
-            // 
-            this.ins_owner.Location = new System.Drawing.Point(297, 257);
-            this.ins_owner.Name = "ins_owner";
-            this.ins_owner.Size = new System.Drawing.Size(119, 36);
-            this.ins_owner.TabIndex = 7;
-            this.ins_owner.Text = "Insert Owner";
-            this.ins_owner.UseVisualStyleBackColor = true;
-            this.ins_owner.Click += new System.EventHandler(this.ins_owner_Click);
-            // 
-            // btn_Unit
-            // 
-            this.btn_Unit.Location = new System.Drawing.Point(310, 338);
-            this.btn_Unit.Name = "btn_Unit";
-            this.btn_Unit.Size = new System.Drawing.Size(75, 23);
-            this.btn_Unit.TabIndex = 8;
-            this.btn_Unit.Text = "Insert Unit";
-            this.btn_Unit.UseVisualStyleBackColor = true;
-            this.btn_Unit.Click += new System.EventHandler(this.btn_Unit_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(141, 334);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Add new Unit";
             // 
             // btn_back
             // 
@@ -158,43 +62,133 @@
             this.btn_Exit.UseVisualStyleBackColor = true;
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
+            // rbBuilding
+            // 
+            this.rbBuilding.AutoSize = true;
+            this.rbBuilding.Location = new System.Drawing.Point(43, 132);
+            this.rbBuilding.Name = "rbBuilding";
+            this.rbBuilding.Size = new System.Drawing.Size(62, 17);
+            this.rbBuilding.TabIndex = 12;
+            this.rbBuilding.TabStop = true;
+            this.rbBuilding.Text = "Building";
+            this.rbBuilding.UseVisualStyleBackColor = true;
+            // 
+            // rbCensus
+            // 
+            this.rbCensus.AutoSize = true;
+            this.rbCensus.Location = new System.Drawing.Point(43, 155);
+            this.rbCensus.Name = "rbCensus";
+            this.rbCensus.Size = new System.Drawing.Size(88, 17);
+            this.rbCensus.TabIndex = 13;
+            this.rbCensus.TabStop = true;
+            this.rbCensus.Text = "Census Tract";
+            this.rbCensus.UseVisualStyleBackColor = true;
+            // 
+            // rbMortgager
+            // 
+            this.rbMortgager.AutoSize = true;
+            this.rbMortgager.Location = new System.Drawing.Point(43, 179);
+            this.rbMortgager.Name = "rbMortgager";
+            this.rbMortgager.Size = new System.Drawing.Size(73, 17);
+            this.rbMortgager.TabIndex = 14;
+            this.rbMortgager.TabStop = true;
+            this.rbMortgager.Text = "Mortgager";
+            this.rbMortgager.UseVisualStyleBackColor = true;
+            // 
+            // rbOwner
+            // 
+            this.rbOwner.AutoSize = true;
+            this.rbOwner.Location = new System.Drawing.Point(43, 203);
+            this.rbOwner.Name = "rbOwner";
+            this.rbOwner.Size = new System.Drawing.Size(56, 17);
+            this.rbOwner.TabIndex = 15;
+            this.rbOwner.TabStop = true;
+            this.rbOwner.Text = "Owner";
+            this.rbOwner.UseVisualStyleBackColor = true;
+            // 
+            // rbUnit
+            // 
+            this.rbUnit.AutoSize = true;
+            this.rbUnit.Location = new System.Drawing.Point(43, 229);
+            this.rbUnit.Name = "rbUnit";
+            this.rbUnit.Size = new System.Drawing.Size(44, 17);
+            this.rbUnit.TabIndex = 16;
+            this.rbUnit.TabStop = true;
+            this.rbUnit.Text = "Unit";
+            this.rbUnit.UseVisualStyleBackColor = true;
+            // 
+            // btnInsert
+            // 
+            this.btnInsert.Location = new System.Drawing.Point(43, 252);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(75, 23);
+            this.btnInsert.TabIndex = 17;
+            this.btnInsert.Text = "Insert";
+            this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
+            // 
+            // insertGrid
+            // 
+            this.insertGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.insertGrid.Location = new System.Drawing.Point(199, 37);
+            this.insertGrid.Name = "insertGrid";
+            this.insertGrid.Size = new System.Drawing.Size(589, 302);
+            this.insertGrid.TabIndex = 18;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(282, 357);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.TabIndex = 19;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(40, 104);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 13);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Create New:";
+            // 
             // Insert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.insertGrid);
+            this.Controls.Add(this.btnInsert);
+            this.Controls.Add(this.rbUnit);
+            this.Controls.Add(this.rbOwner);
+            this.Controls.Add(this.rbMortgager);
+            this.Controls.Add(this.rbCensus);
+            this.Controls.Add(this.rbBuilding);
             this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.btn_back);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.btn_Unit);
-            this.Controls.Add(this.ins_owner);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.btn_insMortgager);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.ins_CensusTrack);
-            this.Controls.Add(this.ins_Bulding);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Name = "Insert";
             this.Text = "Insert";
+            ((System.ComponentModel.ISupportInitialize)(this.insertGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button ins_Bulding;
-        private System.Windows.Forms.Button ins_CensusTrack;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btn_insMortgager;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button ins_owner;
-        private System.Windows.Forms.Button btn_Unit;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btn_back;
         private System.Windows.Forms.Button btn_Exit;
+        private System.Windows.Forms.RadioButton rbBuilding;
+        private System.Windows.Forms.RadioButton rbCensus;
+        private System.Windows.Forms.RadioButton rbMortgager;
+        private System.Windows.Forms.RadioButton rbOwner;
+        private System.Windows.Forms.RadioButton rbUnit;
+        private System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.DataGridView insertGrid;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Label label1;
     }
 }

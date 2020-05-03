@@ -38,5 +38,92 @@ namespace MHA_UserInterface
         {
             Application.Exit();
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (rbBuilding.Checked)
+            {
+
+            }
+            else if (rbCensus.Checked)
+            {
+
+            }
+            else if (rbMortgager.Checked)
+            {
+
+            }
+            else if (rbOwner.Checked)
+            {
+
+            }
+            else if (rbUnit.Checked)
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("Select an option");
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            string searchConnectionString = frmLogin.ConnString();
+            SqlConnection openConnection = new SqlConnection(searchConnectionString);
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            DataSet dataset = new DataSet();
+
+            adapter.SelectCommand = new SqlCommand();
+            adapter.SelectCommand.Connection = openConnection;
+            openConnection.Open();
+            if (this.rbBuilding.Checked)
+            {
+                adapter.SelectCommand.CommandText = "select * from BUILDING;";
+                adapter.Fill(dataset, "BUILDING");
+                deleteGrid.AutoGenerateColumns = true;
+                deleteGrid.DataSource = dataset;
+                deleteGrid.DataMember = "BUILDING";
+            }
+            else if (this.rbCensus.Checked)
+            {
+                adapter.SelectCommand.CommandText = "select * from CENSUS_TRACT;";
+                adapter.Fill(dataset, "CENSUS TRACT");
+                deleteGrid.AutoGenerateColumns = true;
+                deleteGrid.DataSource = dataset;
+                deleteGrid.DataMember = "CENSUS TRACT";
+            }
+            else if (this.rbMortgager.Checked)
+            {
+                adapter.SelectCommand.CommandText = "select * from MORTGAGER;";
+                adapter.Fill(dataset, "MORTGAGER");
+                deleteGrid.AutoGenerateColumns = true;
+                deleteGrid.DataSource = dataset;
+                deleteGrid.DataMember = "MORTGAGER";
+            }
+            else if (this.rbOwner.Checked)
+            {
+                adapter.SelectCommand.CommandText = "select * from OWNER;";
+                adapter.Fill(dataset, "OWNER");
+                deleteGrid.AutoGenerateColumns = true;
+                deleteGrid.DataSource = dataset;
+                deleteGrid.DataMember = "OWNER";
+            }
+            else if (this.rbUnit.Checked)
+            {
+                adapter.SelectCommand.CommandText = "select * from UNIT;";
+                adapter.Fill(dataset, "UNIT");
+                deleteGrid.AutoGenerateColumns = true;
+                deleteGrid.DataSource = dataset;
+                deleteGrid.DataMember = "UNIT";
+            }
+            else
+            {
+                MessageBox.Show("Please select an option");
+            }
+            openConnection.Close();
+            adapter.Dispose();
+            dataset.Dispose();
+        }
     }
 }
