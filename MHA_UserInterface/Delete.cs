@@ -43,23 +43,23 @@ namespace MHA_UserInterface
         {
             if (rbBuilding.Checked)
             {
-
+                //delete form code
             }
             else if (rbCensus.Checked)
             {
-
+                //delete form code
             }
             else if (rbMortgager.Checked)
             {
-
+                //delete form code
             }
             else if (rbOwner.Checked)
             {
-
+                //delete form code
             }
             else if (rbUnit.Checked)
             {
-
+                //delete form code
             }
             else
             {
