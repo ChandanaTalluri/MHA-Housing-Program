@@ -52,6 +52,36 @@
     <Compile Include="Delete.Designer.cs">
       <DependentUpon>Delete.cs</DependentUpon>
     </Compile>
+    <Compile Include="Delete_Building.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete_Building.Designer.cs">
+      <DependentUpon>Delete_Building.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delete_CensusTrack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete_CensusTrack.Designer.cs">
+      <DependentUpon>Delete_CensusTrack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delete_Mortgager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete_Mortgager.Designer.cs">
+      <DependentUpon>Delete_Mortgager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delete_Owner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete_Owner.Designer.cs">
+      <DependentUpon>Delete_Owner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delete_Unit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete_Unit.Designer.cs">
+      <DependentUpon>Delete_Unit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Insert_CensusTrack.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +146,21 @@
     </Compile>
     <EmbeddedResource Include="Delete.resx">
       <DependentUpon>Delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete_Building.resx">
+      <DependentUpon>Delete_Building.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete_CensusTrack.resx">
+      <DependentUpon>Delete_CensusTrack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete_Mortgager.resx">
+      <DependentUpon>Delete_Mortgager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete_Owner.resx">
+      <DependentUpon>Delete_Owner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete_Unit.resx">
+      <DependentUpon>Delete_Unit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InsertBuilding.resx">
       <DependentUpon>InsertBuilding.cs</DependentUpon>

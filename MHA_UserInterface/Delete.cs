@@ -43,23 +43,35 @@ namespace MHA_UserInterface
         {
             if (rbBuilding.Checked)
             {
-                //delete form code
+                this.Hide();
+                Delete_Building delBuilding = new Delete_Building(frmLogin);
+                delBuilding.Show();
+                
             }
             else if (rbCensus.Checked)
             {
-                //delete form code
+                this.Hide();
+                Delete_CensusTrack delCensus = new Delete_CensusTrack(frmLogin);
+                delCensus.Show();
             }
             else if (rbMortgager.Checked)
             {
-                //delete form code
+                this.Hide();
+                Delete_Mortgager delMortgager = new Delete_Mortgager(frmLogin);
+                delMortgager.Show();
             }
             else if (rbOwner.Checked)
             {
-                //delete form code
+                this.Hide();
+                Delete_Owner delOwner = new Delete_Owner(frmLogin);
+                delOwner.Show();
+
             }
             else if (rbUnit.Checked)
             {
-                //delete form code
+                this.Hide();
+                Delete_Unit delUnit = new Delete_Unit(frmLogin);
+                delUnit.Show();
             }
             else
             {
