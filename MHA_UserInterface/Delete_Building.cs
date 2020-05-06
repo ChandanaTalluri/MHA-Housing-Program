@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -21,6 +22,32 @@ namespace MHA_UserInterface
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string connectionString = page.ConnString();
+                SqlConnection openConnection = new SqlConnection(connectionString);
+                SqlDataAdapter adapter = new SqlDataAdapter();
+                DataSet dataset = new DataSet();
+
+                adapter.SelectCommand = new SqlCommand();
+                adapter.SelectCommand.Connection = openConnection;
+                adapter.SelectCommand.CommandText = "Delete from BUILDING where BUILDING_ID = '" + txtBuildingID.Text + "';";
+
+
+                openConnection.Open();
+                adapter.Fill(dataset, "Building");
+                adapter.Dispose();
+                dataset.Dispose();
+                openConnection.Close();
+
+                this.Hide();
+                Delete delForm = new Delete(page);
+                delForm.Show();
+            }
+            catch(SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
 
