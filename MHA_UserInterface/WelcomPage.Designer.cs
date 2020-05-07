@@ -28,90 +28,120 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_UserID = new System.Windows.Forms.Label();
+            this.lbl_Password = new System.Windows.Forms.Label();
             this.txt_userID = new System.Windows.Forms.TextBox();
             this.txt_Password = new System.Windows.Forms.TextBox();
             this.btn_Login = new System.Windows.Forms.Button();
+            this.txt_DatabaseName = new System.Windows.Forms.TextBox();
+            this.txt_ServerName = new System.Windows.Forms.TextBox();
+            this.lbl_ServerName = new System.Windows.Forms.Label();
+            this.lbl_DatabaseName = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(311, 103);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Welcome to MHA";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(269, 154);
+            this.label2.Location = new System.Drawing.Point(12, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(170, 13);
+            this.label2.Size = new System.Drawing.Size(306, 27);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Please enter below details for login";
+            this.label2.Text = "Please enter login credentials.";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // lbl_UserID
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(240, 208);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "UserID:";
+            this.lbl_UserID.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbl_UserID.Location = new System.Drawing.Point(12, 39);
+            this.lbl_UserID.Name = "lbl_UserID";
+            this.lbl_UserID.Size = new System.Drawing.Size(100, 20);
+            this.lbl_UserID.TabIndex = 2;
+            this.lbl_UserID.Text = "UserID:";
             // 
-            // label4
+            // lbl_Password
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(240, 250);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Password:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.lbl_Password.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbl_Password.Location = new System.Drawing.Point(12, 65);
+            this.lbl_Password.Name = "lbl_Password";
+            this.lbl_Password.Size = new System.Drawing.Size(100, 20);
+            this.lbl_Password.TabIndex = 3;
+            this.lbl_Password.Text = "Password:";
             // 
             // txt_userID
             // 
-            this.txt_userID.Location = new System.Drawing.Point(351, 201);
+            this.txt_userID.Location = new System.Drawing.Point(118, 39);
             this.txt_userID.Name = "txt_userID";
-            this.txt_userID.Size = new System.Drawing.Size(87, 20);
+            this.txt_userID.Size = new System.Drawing.Size(200, 20);
             this.txt_userID.TabIndex = 4;
             // 
             // txt_Password
             // 
-            this.txt_Password.Location = new System.Drawing.Point(347, 243);
+            this.txt_Password.Location = new System.Drawing.Point(118, 65);
             this.txt_Password.Name = "txt_Password";
-            this.txt_Password.Size = new System.Drawing.Size(91, 20);
+            this.txt_Password.Size = new System.Drawing.Size(200, 20);
             this.txt_Password.TabIndex = 5;
             // 
             // btn_Login
             // 
-            this.btn_Login.Location = new System.Drawing.Point(295, 305);
+            this.btn_Login.Location = new System.Drawing.Point(12, 143);
             this.btn_Login.Name = "btn_Login";
-            this.btn_Login.Size = new System.Drawing.Size(81, 22);
+            this.btn_Login.Size = new System.Drawing.Size(306, 22);
             this.btn_Login.TabIndex = 6;
             this.btn_Login.Text = "Login";
             this.btn_Login.UseVisualStyleBackColor = true;
             this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
+            // txt_DatabaseName
+            // 
+            this.txt_DatabaseName.Location = new System.Drawing.Point(118, 117);
+            this.txt_DatabaseName.Name = "txt_DatabaseName";
+            this.txt_DatabaseName.Size = new System.Drawing.Size(200, 20);
+            this.txt_DatabaseName.TabIndex = 7;
+            // 
+            // txt_ServerName
+            // 
+            this.txt_ServerName.Location = new System.Drawing.Point(118, 91);
+            this.txt_ServerName.Name = "txt_ServerName";
+            this.txt_ServerName.Size = new System.Drawing.Size(200, 20);
+            this.txt_ServerName.TabIndex = 8;
+            // 
+            // lbl_ServerName
+            // 
+            this.lbl_ServerName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbl_ServerName.Location = new System.Drawing.Point(12, 91);
+            this.lbl_ServerName.Name = "lbl_ServerName";
+            this.lbl_ServerName.Size = new System.Drawing.Size(100, 20);
+            this.lbl_ServerName.TabIndex = 9;
+            this.lbl_ServerName.Text = "Server Name";
+            // 
+            // lbl_DatabaseName
+            // 
+            this.lbl_DatabaseName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbl_DatabaseName.Location = new System.Drawing.Point(12, 117);
+            this.lbl_DatabaseName.Name = "lbl_DatabaseName";
+            this.lbl_DatabaseName.Size = new System.Drawing.Size(100, 20);
+            this.lbl_DatabaseName.TabIndex = 10;
+            this.lbl_DatabaseName.Text = "Database Name";
+            // 
             // WelcomPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(326, 177);
+            this.Controls.Add(this.lbl_DatabaseName);
+            this.Controls.Add(this.lbl_ServerName);
+            this.Controls.Add(this.txt_ServerName);
+            this.Controls.Add(this.txt_DatabaseName);
             this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.txt_Password);
             this.Controls.Add(this.txt_userID);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbl_Password);
+            this.Controls.Add(this.lbl_UserID);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(342, 216);
+            this.MinimumSize = new System.Drawing.Size(342, 216);
             this.Name = "WelcomPage";
-            this.Text = "WelcomPage";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.WelcomPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -119,13 +149,15 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbl_UserID;
+        private System.Windows.Forms.Label lbl_Password;
         private System.Windows.Forms.TextBox txt_userID;
         private System.Windows.Forms.TextBox txt_Password;
         private System.Windows.Forms.Button btn_Login;
+        private System.Windows.Forms.TextBox txt_DatabaseName;
+        private System.Windows.Forms.TextBox txt_ServerName;
+        private System.Windows.Forms.Label lbl_ServerName;
+        private System.Windows.Forms.Label lbl_DatabaseName;
     }
 }

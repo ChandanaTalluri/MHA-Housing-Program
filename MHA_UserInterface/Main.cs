@@ -58,5 +58,10 @@ namespace MHA_UserInterface
             Delete objSerach = new Delete(frmLogin);
             objSerach.Show();
         }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

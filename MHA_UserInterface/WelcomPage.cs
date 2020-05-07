@@ -19,27 +19,20 @@ namespace MHA_UserInterface
             InitializeComponent();
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void WelcomPage_Load(object sender, EventArgs e)
         {
 
         }
+
         public string ConnString()
         {
-            string UserID, UserPassword, DatabaseName, ServerName;
-            string connectionString;
-            UserID = txt_userID.Text;
-            UserPassword = txt_Password.Text;
-            DatabaseName = "MHA";
-            //ServerName = "DESKTOP-QQAP9VT\\SQLEXPRESS";
-            //ServerName = "HPASS-CART19-L";
-            connectionString = "Data Source=" + ServerName + "; Initial Catalog=" + DatabaseName + "; User ID=" + UserID + "; Password=" + UserPassword + ";";
+            //These values should not be hard-coded in.
+            string userID = txt_userID.Text;
+            string userPassword = txt_Password.Text;
+            string databaseName = txt_DatabaseName.Text;
+            string serverName = txt_ServerName.Text;
 
-
+            string connectionString = "Data Source=" + serverName + "; Initial Catalog=" + databaseName + "; User ID=" + userID + "; Password=" + userPassword + ";";
             return connectionString;
         }
         public bool CheckConnection()

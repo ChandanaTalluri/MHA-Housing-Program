@@ -120,6 +120,7 @@
             this.Controls.Add(this.btn_Select);
             this.Name = "Main";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
