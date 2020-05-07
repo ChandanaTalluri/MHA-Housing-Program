@@ -34,11 +34,11 @@
             this.btnRefresh = new System.Windows.Forms.Button();
             this.insertGrid = new System.Windows.Forms.DataGridView();
             this.btnInsert = new System.Windows.Forms.Button();
-            this.rbUnit = new System.Windows.Forms.RadioButton();
-            this.rbOwner = new System.Windows.Forms.RadioButton();
-            this.rbMortgager = new System.Windows.Forms.RadioButton();
-            this.rbCensus = new System.Windows.Forms.RadioButton();
-            this.rbBuilding = new System.Windows.Forms.RadioButton();
+            this.rbtn_Unit = new System.Windows.Forms.RadioButton();
+            this.rbtn_Owner = new System.Windows.Forms.RadioButton();
+            this.rbtn_Mortgager = new System.Windows.Forms.RadioButton();
+            this.rbtn_CensusTract = new System.Windows.Forms.RadioButton();
+            this.rbtn_Building = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.insertGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,56 +96,57 @@
             this.btnInsert.TabIndex = 26;
             this.btnInsert.Text = "Update";
             this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
-            // rbUnit
+            // rbtn_Unit
             // 
-            this.rbUnit.Location = new System.Drawing.Point(12, 129);
-            this.rbUnit.Name = "rbUnit";
-            this.rbUnit.Size = new System.Drawing.Size(100, 20);
-            this.rbUnit.TabIndex = 25;
-            this.rbUnit.TabStop = true;
-            this.rbUnit.Text = "Unit";
-            this.rbUnit.UseVisualStyleBackColor = true;
+            this.rbtn_Unit.Location = new System.Drawing.Point(12, 129);
+            this.rbtn_Unit.Name = "rbtn_Unit";
+            this.rbtn_Unit.Size = new System.Drawing.Size(100, 20);
+            this.rbtn_Unit.TabIndex = 25;
+            this.rbtn_Unit.TabStop = true;
+            this.rbtn_Unit.Text = "Unit";
+            this.rbtn_Unit.UseVisualStyleBackColor = true;
             // 
-            // rbOwner
+            // rbtn_Owner
             // 
-            this.rbOwner.Location = new System.Drawing.Point(12, 103);
-            this.rbOwner.Name = "rbOwner";
-            this.rbOwner.Size = new System.Drawing.Size(100, 20);
-            this.rbOwner.TabIndex = 24;
-            this.rbOwner.TabStop = true;
-            this.rbOwner.Text = "Owner";
-            this.rbOwner.UseVisualStyleBackColor = true;
+            this.rbtn_Owner.Location = new System.Drawing.Point(12, 103);
+            this.rbtn_Owner.Name = "rbtn_Owner";
+            this.rbtn_Owner.Size = new System.Drawing.Size(100, 20);
+            this.rbtn_Owner.TabIndex = 24;
+            this.rbtn_Owner.TabStop = true;
+            this.rbtn_Owner.Text = "Owner";
+            this.rbtn_Owner.UseVisualStyleBackColor = true;
             // 
-            // rbMortgager
+            // rbtn_Mortgager
             // 
-            this.rbMortgager.Location = new System.Drawing.Point(12, 79);
-            this.rbMortgager.Name = "rbMortgager";
-            this.rbMortgager.Size = new System.Drawing.Size(100, 20);
-            this.rbMortgager.TabIndex = 23;
-            this.rbMortgager.TabStop = true;
-            this.rbMortgager.Text = "Mortgager";
-            this.rbMortgager.UseVisualStyleBackColor = true;
+            this.rbtn_Mortgager.Location = new System.Drawing.Point(12, 79);
+            this.rbtn_Mortgager.Name = "rbtn_Mortgager";
+            this.rbtn_Mortgager.Size = new System.Drawing.Size(100, 20);
+            this.rbtn_Mortgager.TabIndex = 23;
+            this.rbtn_Mortgager.TabStop = true;
+            this.rbtn_Mortgager.Text = "Mortgager";
+            this.rbtn_Mortgager.UseVisualStyleBackColor = true;
             // 
-            // rbCensus
+            // rbtn_CensusTract
             // 
-            this.rbCensus.Location = new System.Drawing.Point(12, 55);
-            this.rbCensus.Name = "rbCensus";
-            this.rbCensus.Size = new System.Drawing.Size(100, 20);
-            this.rbCensus.TabIndex = 22;
-            this.rbCensus.TabStop = true;
-            this.rbCensus.Text = "Census Tract";
-            this.rbCensus.UseVisualStyleBackColor = true;
+            this.rbtn_CensusTract.Location = new System.Drawing.Point(12, 55);
+            this.rbtn_CensusTract.Name = "rbtn_CensusTract";
+            this.rbtn_CensusTract.Size = new System.Drawing.Size(100, 20);
+            this.rbtn_CensusTract.TabIndex = 22;
+            this.rbtn_CensusTract.TabStop = true;
+            this.rbtn_CensusTract.Text = "Census Tract";
+            this.rbtn_CensusTract.UseVisualStyleBackColor = true;
             // 
-            // rbBuilding
+            // rbtn_Building
             // 
-            this.rbBuilding.Location = new System.Drawing.Point(12, 32);
-            this.rbBuilding.Name = "rbBuilding";
-            this.rbBuilding.Size = new System.Drawing.Size(100, 20);
-            this.rbBuilding.TabIndex = 21;
-            this.rbBuilding.TabStop = true;
-            this.rbBuilding.Text = "Building";
-            this.rbBuilding.UseVisualStyleBackColor = true;
+            this.rbtn_Building.Location = new System.Drawing.Point(12, 32);
+            this.rbtn_Building.Name = "rbtn_Building";
+            this.rbtn_Building.Size = new System.Drawing.Size(100, 20);
+            this.rbtn_Building.TabIndex = 21;
+            this.rbtn_Building.TabStop = true;
+            this.rbtn_Building.Text = "Building";
+            this.rbtn_Building.UseVisualStyleBackColor = true;
             // 
             // Update
             // 
@@ -156,11 +157,11 @@
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.insertGrid);
             this.Controls.Add(this.btnInsert);
-            this.Controls.Add(this.rbUnit);
-            this.Controls.Add(this.rbOwner);
-            this.Controls.Add(this.rbMortgager);
-            this.Controls.Add(this.rbCensus);
-            this.Controls.Add(this.rbBuilding);
+            this.Controls.Add(this.rbtn_Unit);
+            this.Controls.Add(this.rbtn_Owner);
+            this.Controls.Add(this.rbtn_Mortgager);
+            this.Controls.Add(this.rbtn_CensusTract);
+            this.Controls.Add(this.rbtn_Building);
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.btn_Exit);
             this.Name = "Update";
@@ -178,10 +179,10 @@
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridView insertGrid;
         private System.Windows.Forms.Button btnInsert;
-        private System.Windows.Forms.RadioButton rbUnit;
-        private System.Windows.Forms.RadioButton rbOwner;
-        private System.Windows.Forms.RadioButton rbMortgager;
-        private System.Windows.Forms.RadioButton rbCensus;
-        private System.Windows.Forms.RadioButton rbBuilding;
+        private System.Windows.Forms.RadioButton rbtn_Unit;
+        private System.Windows.Forms.RadioButton rbtn_Owner;
+        private System.Windows.Forms.RadioButton rbtn_Mortgager;
+        private System.Windows.Forms.RadioButton rbtn_CensusTract;
+        private System.Windows.Forms.RadioButton rbtn_Building;
     }
 }

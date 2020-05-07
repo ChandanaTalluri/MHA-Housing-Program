@@ -13,16 +13,16 @@ namespace MHA_UserInterface
 {
     public partial class Update : Form
     {
-        WelcomPage frmLogin;
-        public Update(WelcomPage objLogin)
+        WelcomPage loginForm;
+        public Update(WelcomPage newLoginForm)
         {
             InitializeComponent();
-            this.frmLogin = objLogin;
+            this.loginForm = newLoginForm;
         }
 
         private void btn_back_Click(object sender, EventArgs e)
         {
-            Main objMain = new Main(frmLogin);
+            Main objMain = new Main(loginForm);
             objMain.Show();
             this.Close();
         }
@@ -34,7 +34,7 @@ namespace MHA_UserInterface
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            string searchConnectionString = frmLogin.ConnString();
+            string searchConnectionString = loginForm.ConnString();
             SqlConnection openConnection = new SqlConnection(searchConnectionString);
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataSet dataset = new DataSet();
@@ -42,7 +42,7 @@ namespace MHA_UserInterface
             adapter.SelectCommand = new SqlCommand();
             adapter.SelectCommand.Connection = openConnection;
             openConnection.Open();
-            if (this.rbBuilding.Checked)
+            if (this.rbtn_Building.Checked)
             {
                 adapter.SelectCommand.CommandText = "select * from BUILDING;";
                 adapter.Fill(dataset, "BUILDING");
@@ -50,7 +50,7 @@ namespace MHA_UserInterface
                 insertGrid.DataSource = dataset;
                 insertGrid.DataMember = "BUILDING";
             }
-            else if (this.rbCensus.Checked)
+            else if (this.rbtn_CensusTract.Checked)
             {
                 adapter.SelectCommand.CommandText = "select * from CENSUS_TRACT;";
                 adapter.Fill(dataset, "CENSUS TRACT");
@@ -58,7 +58,7 @@ namespace MHA_UserInterface
                 insertGrid.DataSource = dataset;
                 insertGrid.DataMember = "CENSUS TRACT";
             }
-            else if (this.rbMortgager.Checked)
+            else if (this.rbtn_Mortgager.Checked)
             {
                 adapter.SelectCommand.CommandText = "select * from MORTGAGER;";
                 adapter.Fill(dataset, "MORTGAGER");
@@ -66,7 +66,7 @@ namespace MHA_UserInterface
                 insertGrid.DataSource = dataset;
                 insertGrid.DataMember = "MORTGAGER";
             }
-            else if (this.rbOwner.Checked)
+            else if (this.rbtn_Owner.Checked)
             {
                 adapter.SelectCommand.CommandText = "select * from OWNER;";
                 adapter.Fill(dataset, "OWNER");
@@ -74,7 +74,7 @@ namespace MHA_UserInterface
                 insertGrid.DataSource = dataset;
                 insertGrid.DataMember = "OWNER";
             }
-            else if (this.rbUnit.Checked)
+            else if (this.rbtn_Unit.Checked)
             {
                 adapter.SelectCommand.CommandText = "select * from UNIT;";
                 adapter.Fill(dataset, "UNIT");
@@ -89,6 +89,40 @@ namespace MHA_UserInterface
             openConnection.Close();
             adapter.Dispose();
             dataset.Dispose();
+        }
+
+        private void btnInsert_Click(object sender, EventArgs e)
+        {
+            if (rbtn_Building.Checked)
+            {
+                Update_Building newForm = new Update_Building(this.loginForm);
+                newForm.Show();
+                this.Close();
+            }
+            else if (rbtn_CensusTract.Checked)
+            {
+                Update_CensusTrack newForm = new Update_CensusTrack(this.loginForm);
+                newForm.Show();
+                this.Close();
+            }
+            else if (rbtn_Mortgager.Checked)
+            {
+                Update_Mortgager newForm = new Update_Mortgager(this.loginForm);
+                newForm.Show();
+                this.Close();
+            }
+            else if (rbtn_Owner.Checked)
+            {
+                Update_Owner newForm = new Update_Owner(this.loginForm);
+                newForm.Show();
+                this.Close();
+            }
+            else if (rbtn_Unit.Checked)
+            {
+                Update_Unit newForm = new Update_Unit(this.loginForm);
+                newForm.Show();
+                this.Close();
+            }
         }
     }
 }
