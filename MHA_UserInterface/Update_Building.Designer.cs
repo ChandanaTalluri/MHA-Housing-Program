@@ -21,9 +21,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.txt_BuildingID = new System.Windows.Forms.TextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.txt_StreetAddress = new System.Windows.Forms.TextBox();
             this.txt_City = new System.Windows.Forms.TextBox();
             this.txt_Name = new System.Windows.Forms.TextBox();
@@ -54,11 +52,6 @@
             this.txt_BuildingID.Name = "txt_BuildingID";
             this.txt_BuildingID.Size = new System.Drawing.Size(100, 20);
             this.txt_BuildingID.TabIndex = 0;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // txt_StreetAddress
             // 
@@ -290,7 +283,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox txt_BuildingID;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox txt_StreetAddress;
         private System.Windows.Forms.TextBox txt_City;
         private System.Windows.Forms.TextBox txt_Name;
