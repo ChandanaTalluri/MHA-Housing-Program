@@ -12,9 +12,39 @@ namespace MHA_UserInterface
 {
     public partial class Update_Mortgager : Form
     {
-        public Update_Mortgager()
+        private WelcomPage loginForm;
+
+        public Update_Mortgager(WelcomPage newLoginForm)
         {
-            InitializeComponent();
+            this.loginForm = newLoginForm;
+        }
+
+        private bool updateWithSQL(string updateStatement)
+        {
+
+        }
+
+        private bool primaryKeyExists(string key)
+        {
+
+        }
+
+
+        private void Update_Mortgager_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Update_Click(object sender, EventArgs e)
+        {
+            if (primaryKeyExists(txt_BuildingID.Text))
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("The primary key provided does not exist.", "Error");
+            }
         }
     }
 }

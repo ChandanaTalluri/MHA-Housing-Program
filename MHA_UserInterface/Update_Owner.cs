@@ -12,9 +12,39 @@ namespace MHA_UserInterface
 {
     public partial class Update_Owner : Form
     {
-        public Update_Owner()
+        private WelcomPage loginForm;
+
+        public Update_Owner(WelcomPage newLoginForm)
         {
-            InitializeComponent();
+            this.loginForm = newLoginForm;
+        }
+
+        private bool updateWithSQL(string updateStatement)
+        {
+
+        }
+
+        private bool primaryKeyExists(string key)
+        {
+
+        }
+
+
+        private void Update_Owner_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Update_Click(object sender, EventArgs e)
+        {
+            if (primaryKeyExists(txt_OwnerID.Text))
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("The primary key provided does not exist.", "Error");
+            }
         }
     }
 }

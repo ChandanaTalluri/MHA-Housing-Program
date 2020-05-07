@@ -228,6 +228,21 @@
     <EmbeddedResource Include="Update.resx">
       <DependentUpon>Update.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Update_Building.resx">
+      <DependentUpon>Update_Building.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update_CensusTrack.resx">
+      <DependentUpon>Update_CensusTrack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update_Mortgager.resx">
+      <DependentUpon>Update_Mortgager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update_Owner.resx">
+      <DependentUpon>Update_Owner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update_Unit.resx">
+      <DependentUpon>Update_Unit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WelcomPage.resx">
       <DependentUpon>WelcomPage.cs</DependentUpon>
     </EmbeddedResource>
