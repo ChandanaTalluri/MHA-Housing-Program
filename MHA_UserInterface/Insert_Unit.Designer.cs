@@ -263,7 +263,7 @@
             this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.btn_Back);
             this.Name = "Insert_Unit";
-            this.Text = "Insert_Unit";
+            this.Text = "Insert Unit";
             this.ResumeLayout(false);
             this.PerformLayout();
 

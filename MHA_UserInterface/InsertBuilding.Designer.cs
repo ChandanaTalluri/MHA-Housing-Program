@@ -286,7 +286,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_CensusID);
             this.Name = "InsertBuilding";
-            this.Text = "InserBuilding";
+            this.Text = "Insert Building";
             this.Load += new System.EventHandler(this.InserBuilding_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
