@@ -85,7 +85,56 @@ namespace MHA_UserInterface
         {
             if (textboxContainsValidText(txt_UnitID) && validPrimaryKey(txt_UnitID.Text))
             {
+                string update = "update Unit set ";
+                string where = " where Unit_ID = '" + txt_UnitID.Text + "'";
+                string command;
 
+                //Update columns where textbox has valid input.
+                if (textboxContainsValidText(txt_BuildingID))
+                {
+                    command = update + "Building_ID = '" + txt_BuildingID.Text + "'" + where;
+                    if (!updateWithSQL(command)) { MessageBox.Show("The Building_ID column could not be updated."); }
+                }
+                if (textboxContainsValidText(txt_UnitType))
+                {
+                    command = update + "Type = '" + txt_UnitType.Text + "'" + where;
+                    if (!updateWithSQL(command)) { MessageBox.Show("The Type column could not be updated."); }
+                }
+                if (textboxContainsValidText(txt_LocationInBuilding))
+                {
+                    command = update + "Building_Location = '" + txt_LocationInBuilding.Text + "'" + where;
+                    if (!updateWithSQL(command)) { MessageBox.Show("The Building_Location column could not be updated."); }
+                }
+                if (textboxContainsValidText(txt_SizeSquareFeet))
+                {
+                    command = update + "Size_Square_Feet = '" + txt_SizeSquareFeet.Text + "'" + where;
+                    if (!updateWithSQL(command)) { MessageBox.Show("The Size_Square_Feet column could not be updated."); }
+                }
+                if (textboxContainsValidText(txt_NumBaths))
+                {
+                    command = update + "Num_Baths = '" + txt_NumBaths.Text + "'" + where;
+                    if (!updateWithSQL(command)) { MessageBox.Show("The Num_Baths column could not be updated."); }
+                }
+                if (textboxContainsValidText(txt_KitchenAndDining))
+                {
+                    command = update + "Kitchen_and_Dining = '" + txt_KitchenAndDining.Text + "'" + where;
+                    if (!updateWithSQL(command)) { MessageBox.Show("The Kitchen_and_Dining column could not be updated."); }
+                }
+                if (textboxContainsValidText(txt_SpecialRemarks))
+                {
+                    command = update + "Special_Remarks = '" + txt_SpecialRemarks.Text + "'" + where;
+                    if (!updateWithSQL(command)) { MessageBox.Show("The Special_Remarks column could not be updated."); }
+                }
+                if (textboxContainsValidText(txt_AvgOccupancy))
+                {
+                    command = update + "Avg_Occupancy = '" + txt_AvgOccupancy.Text + "'" + where;
+                    if (!updateWithSQL(command)) { MessageBox.Show("The Avg_Occupancy column could not be updated."); }
+                }
+                if (textboxContainsValidText(txt_Occupied))
+                {
+                    command = update + "Occupied = '" + txt_Occupied.Text + "'" + where;
+                    if (!updateWithSQL(command)) { MessageBox.Show("The Occupied column could not be updated."); }
+                }
             }
             else
             {
