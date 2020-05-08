@@ -76,16 +76,50 @@ namespace MHA_UserInterface
         }
 
 
-        private void Update_Owner_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_Update_Click(object sender, EventArgs e)
         {
             if (textboxContainsValidText(txt_OwnerID) && validPrimaryKey(txt_OwnerID.Text))
             {
+                string update = "update Owner set ";
+                string where = " where Owner_ID = '" + txt_OwnerID.Text + "'";
+                string command;
 
+                //Update columns where textbox has valid input.
+                if (textboxContainsValidText(txt_FirstName))
+                {
+                    command = update + "First_Name = '" + txt_FirstName.Text + "'" + where;
+                    if (!updateWithSQL(command)) { MessageBox.Show("The First_Name column could not be updated."); }
+                }
+                if (textboxContainsValidText(txt_LastName))
+                {
+                    command = update + "Last_Name = '" + txt_LastName.Text + "'" + where;
+                    if (!updateWithSQL(command)) { MessageBox.Show("The Last_Name column could not be updated."); }
+                }
+                if (textboxContainsValidText(txt_PhoneNum))
+                {
+                    command = update + "Phone_Num = '" + txt_PhoneNum.Text + "'" + where;
+                    if (!updateWithSQL(command)) { MessageBox.Show("The Phone_Num column could not be updated."); }
+                }
+                if (textboxContainsValidText(txt_StreetAddress))
+                {
+                    command = update + "Street_Address = '" + txt_StreetAddress.Text + "'" + where;
+                    if (!updateWithSQL(command)) { MessageBox.Show("The Street_Address column could not be updated."); }
+                }
+                if (textboxContainsValidText(txt_City))
+                {
+                    command = update + "City = '" + txt_City.Text + "'" + where;
+                    if (!updateWithSQL(command)) { MessageBox.Show("The City column could not be updated."); }
+                }
+                if (textboxContainsValidText(txt_State))
+                {
+                    command = update + "State = '" + txt_State.Text + "'" + where;
+                    if (!updateWithSQL(command)) { MessageBox.Show("The State column could not be updated."); }
+                }
+                if (textboxContainsValidText(txt_PostalCode))
+                {
+                    command = update + "Postal_Code = '" + txt_PostalCode.Text + "'" + where;
+                    if (!updateWithSQL(command)) { MessageBox.Show("The Postal_Code column could not be updated."); }
+                }
             }
             else
             {

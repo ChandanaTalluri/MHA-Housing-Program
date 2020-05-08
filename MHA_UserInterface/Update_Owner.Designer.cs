@@ -224,7 +224,6 @@
             this.MinimumSize = new System.Drawing.Size(275, 350);
             this.Name = "Update_Owner";
             this.Text = "Update_Owner";
-            this.Load += new System.EventHandler(this.Update_Owner_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
