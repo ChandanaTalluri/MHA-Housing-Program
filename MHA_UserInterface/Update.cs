@@ -123,6 +123,10 @@ namespace MHA_UserInterface
                 newForm.Show();
                 this.Close();
             }
+            else
+            {
+                MessageBox.Show("Please make a selection.");
+            }
         }
     }
 }
