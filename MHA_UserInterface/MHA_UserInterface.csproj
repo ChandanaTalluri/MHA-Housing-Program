@@ -138,6 +138,36 @@
     <Compile Include="Update.Designer.cs">
       <DependentUpon>Update.cs</DependentUpon>
     </Compile>
+    <Compile Include="Update_Building.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update_Building.Designer.cs">
+      <DependentUpon>Update_Building.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update_CensusTrack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update_CensusTrack.Designer.cs">
+      <DependentUpon>Update_CensusTrack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update_Mortgager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update_Mortgager.Designer.cs">
+      <DependentUpon>Update_Mortgager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update_Owner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update_Owner.Designer.cs">
+      <DependentUpon>Update_Owner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update_Unit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update_Unit.Designer.cs">
+      <DependentUpon>Update_Unit.cs</DependentUpon>
+    </Compile>
     <Compile Include="WelcomPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +227,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Update.resx">
       <DependentUpon>Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update_Building.resx">
+      <DependentUpon>Update_Building.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update_CensusTrack.resx">
+      <DependentUpon>Update_CensusTrack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update_Mortgager.resx">
+      <DependentUpon>Update_Mortgager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update_Owner.resx">
+      <DependentUpon>Update_Owner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update_Unit.resx">
+      <DependentUpon>Update_Unit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WelcomPage.resx">
       <DependentUpon>WelcomPage.cs</DependentUpon>
