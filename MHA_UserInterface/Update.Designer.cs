@@ -104,7 +104,6 @@
             this.rbtn_Unit.Name = "rbtn_Unit";
             this.rbtn_Unit.Size = new System.Drawing.Size(100, 20);
             this.rbtn_Unit.TabIndex = 25;
-            this.rbtn_Unit.TabStop = true;
             this.rbtn_Unit.Text = "Unit";
             this.rbtn_Unit.UseVisualStyleBackColor = true;
             // 
@@ -114,7 +113,6 @@
             this.rbtn_Owner.Name = "rbtn_Owner";
             this.rbtn_Owner.Size = new System.Drawing.Size(100, 20);
             this.rbtn_Owner.TabIndex = 24;
-            this.rbtn_Owner.TabStop = true;
             this.rbtn_Owner.Text = "Owner";
             this.rbtn_Owner.UseVisualStyleBackColor = true;
             // 
@@ -124,7 +122,6 @@
             this.rbtn_Mortgager.Name = "rbtn_Mortgager";
             this.rbtn_Mortgager.Size = new System.Drawing.Size(100, 20);
             this.rbtn_Mortgager.TabIndex = 23;
-            this.rbtn_Mortgager.TabStop = true;
             this.rbtn_Mortgager.Text = "Mortgager";
             this.rbtn_Mortgager.UseVisualStyleBackColor = true;
             // 
@@ -134,12 +131,12 @@
             this.rbtn_CensusTract.Name = "rbtn_CensusTract";
             this.rbtn_CensusTract.Size = new System.Drawing.Size(100, 20);
             this.rbtn_CensusTract.TabIndex = 22;
-            this.rbtn_CensusTract.TabStop = true;
             this.rbtn_CensusTract.Text = "Census Tract";
             this.rbtn_CensusTract.UseVisualStyleBackColor = true;
             // 
             // rbtn_Building
             // 
+            this.rbtn_Building.Checked = true;
             this.rbtn_Building.Location = new System.Drawing.Point(12, 32);
             this.rbtn_Building.Name = "rbtn_Building";
             this.rbtn_Building.Size = new System.Drawing.Size(100, 20);

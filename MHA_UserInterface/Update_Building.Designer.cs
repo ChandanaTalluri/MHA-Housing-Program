@@ -44,6 +44,7 @@
             this.lbl_RenovationsAndRepairs = new System.Windows.Forms.Label();
             this.lbl_HandicapAccessible = new System.Windows.Forms.Label();
             this.btn_Update = new System.Windows.Forms.Button();
+            this.btn_Back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt_BuildingID
@@ -243,11 +244,22 @@
             this.btn_Update.UseVisualStyleBackColor = true;
             this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
             // 
+            // btn_Back
+            // 
+            this.btn_Back.Location = new System.Drawing.Point(11, 351);
+            this.btn_Back.Name = "btn_Back";
+            this.btn_Back.Size = new System.Drawing.Size(236, 23);
+            this.btn_Back.TabIndex = 27;
+            this.btn_Back.Text = "Back to main update form";
+            this.btn_Back.UseVisualStyleBackColor = true;
+            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
+            // 
             // Update_Building
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(259, 351);
+            this.ClientSize = new System.Drawing.Size(259, 381);
+            this.Controls.Add(this.btn_Back);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.lbl_HandicapAccessible);
             this.Controls.Add(this.lbl_RenovationsAndRepairs);
@@ -271,8 +283,8 @@
             this.Controls.Add(this.txt_City);
             this.Controls.Add(this.txt_StreetAddress);
             this.Controls.Add(this.txt_BuildingID);
-            this.MaximumSize = new System.Drawing.Size(275, 390);
-            this.MinimumSize = new System.Drawing.Size(275, 390);
+            this.MaximumSize = new System.Drawing.Size(275, 420);
+            this.MinimumSize = new System.Drawing.Size(275, 420);
             this.Name = "Update_Building";
             this.Text = "Update Building";
             this.ResumeLayout(false);
@@ -305,5 +317,6 @@
         private System.Windows.Forms.Label lbl_RenovationsAndRepairs;
         private System.Windows.Forms.Label lbl_HandicapAccessible;
         private System.Windows.Forms.Button btn_Update;
+        private System.Windows.Forms.Button btn_Back;
     }
 }

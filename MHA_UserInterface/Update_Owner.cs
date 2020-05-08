@@ -92,5 +92,12 @@ namespace MHA_UserInterface
                 MessageBox.Show("The primary key provided is not valid.", "Error");
             }
         }
+
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            Update updateForm = new Update(loginForm);
+            updateForm.Show();
+            this.Close();
+        }
     }
 }

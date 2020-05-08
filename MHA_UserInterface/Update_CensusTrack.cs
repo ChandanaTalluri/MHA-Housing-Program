@@ -75,22 +75,32 @@ namespace MHA_UserInterface
         }
 
 
-
-        private void Update_CensusTrack_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_Update_Click(object sender, EventArgs e)
         {
-            if (textboxContainsValidText(txt_BuildingID) && validPrimaryKey(txt_BuildingID.Text))
+            if (textboxContainsValidText(txt_TractID) && validPrimaryKey(txt_TractID.Text))
             {
+                string update = "update Census_Tract set ";
+                string where = " where tract_ID = '" + txt_TractID.Text + "'";
+                string command;
 
+                //Update columns where textbox has valid input.
+                if (textboxContainsValidText(txt_MedianIncome))
+                {
+                    command = update + "Median_income = '" + txt_MedianIncome.Text + "'" + where;
+                    if (!updateWithSQL(command)) { MessageBox.Show("The Median_Income column could not be updated."); }
+                }
             }
             else
             {
                 MessageBox.Show("The primary key provided is not valid.", "Error");
             }
+        }
+
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            Update updateForm = new Update(loginForm);
+            updateForm.Show();
+            this.Close();
         }
     }
 }

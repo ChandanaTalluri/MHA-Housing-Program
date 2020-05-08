@@ -77,10 +77,6 @@ namespace MHA_UserInterface
         }
 
 
-
-
-
-
         private void btn_Update_Click(object sender, EventArgs e)
         {
             if (textboxContainsValidText(txt_BuildingID) && validPrimaryKey(txt_BuildingID.Text))
@@ -145,6 +141,13 @@ namespace MHA_UserInterface
             {
                 MessageBox.Show("The primary key provided is not valid.", "Error");
             }
+        }
+
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            Update updateForm = new Update(loginForm);
+            updateForm.Show();
+            this.Close();
         }
     }
 }
