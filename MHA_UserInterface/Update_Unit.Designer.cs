@@ -42,6 +42,7 @@
             this.txt_SpecialRemarks = new System.Windows.Forms.TextBox();
             this.txt_KitchenAndDining = new System.Windows.Forms.TextBox();
             this.txt_UnitID = new System.Windows.Forms.TextBox();
+            this.btn_Back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_Update
@@ -224,11 +225,22 @@
             this.txt_UnitID.Size = new System.Drawing.Size(100, 20);
             this.txt_UnitID.TabIndex = 28;
             // 
+            // btn_Back
+            // 
+            this.btn_Back.Location = new System.Drawing.Point(12, 328);
+            this.btn_Back.Name = "btn_Back";
+            this.btn_Back.Size = new System.Drawing.Size(236, 23);
+            this.btn_Back.TabIndex = 49;
+            this.btn_Back.Text = "Back to main update form";
+            this.btn_Back.UseVisualStyleBackColor = true;
+            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
+            // 
             // Update_Unit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(259, 331);
+            this.ClientSize = new System.Drawing.Size(259, 361);
+            this.Controls.Add(this.btn_Back);
             this.Controls.Add(this.lbl_NumBaths);
             this.Controls.Add(this.lbl_SizeSquareFeet);
             this.Controls.Add(this.lbl_Occupied);
@@ -250,8 +262,8 @@
             this.Controls.Add(this.txt_KitchenAndDining);
             this.Controls.Add(this.txt_UnitID);
             this.Controls.Add(this.btn_Update);
-            this.MaximumSize = new System.Drawing.Size(275, 370);
-            this.MinimumSize = new System.Drawing.Size(275, 370);
+            this.MaximumSize = new System.Drawing.Size(275, 400);
+            this.MinimumSize = new System.Drawing.Size(275, 400);
             this.Name = "Update_Unit";
             this.Text = "Update_Unit";
             this.Load += new System.EventHandler(this.Update_Unit_Load);
@@ -283,5 +295,6 @@
         private System.Windows.Forms.TextBox txt_SpecialRemarks;
         private System.Windows.Forms.TextBox txt_KitchenAndDining;
         private System.Windows.Forms.TextBox txt_UnitID;
+        private System.Windows.Forms.Button btn_Back;
     }
 }

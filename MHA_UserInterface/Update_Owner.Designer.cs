@@ -38,6 +38,7 @@
             this.txt_City = new System.Windows.Forms.TextBox();
             this.txt_StreetAddress = new System.Windows.Forms.TextBox();
             this.txt_OwnerID = new System.Windows.Forms.TextBox();
+            this.btn_Back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_Update
@@ -186,11 +187,22 @@
             this.txt_OwnerID.Size = new System.Drawing.Size(100, 20);
             this.txt_OwnerID.TabIndex = 28;
             // 
+            // btn_Back
+            // 
+            this.btn_Back.Location = new System.Drawing.Point(12, 276);
+            this.btn_Back.Name = "btn_Back";
+            this.btn_Back.Size = new System.Drawing.Size(236, 23);
+            this.btn_Back.TabIndex = 47;
+            this.btn_Back.Text = "Back to main update form";
+            this.btn_Back.UseVisualStyleBackColor = true;
+            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
+            // 
             // Update_Owner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(259, 281);
+            this.ClientSize = new System.Drawing.Size(259, 311);
+            this.Controls.Add(this.btn_Back);
             this.Controls.Add(this.lbl_PostalCode);
             this.Controls.Add(this.lbl_State);
             this.Controls.Add(this.lbl_City);
@@ -208,11 +220,10 @@
             this.Controls.Add(this.txt_StreetAddress);
             this.Controls.Add(this.txt_OwnerID);
             this.Controls.Add(this.btn_Update);
-            this.MaximumSize = new System.Drawing.Size(275, 320);
-            this.MinimumSize = new System.Drawing.Size(275, 320);
+            this.MaximumSize = new System.Drawing.Size(275, 350);
+            this.MinimumSize = new System.Drawing.Size(275, 350);
             this.Name = "Update_Owner";
             this.Text = "Update_Owner";
-            this.Load += new System.EventHandler(this.Update_Owner_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,5 +248,6 @@
         private System.Windows.Forms.TextBox txt_City;
         private System.Windows.Forms.TextBox txt_StreetAddress;
         private System.Windows.Forms.TextBox txt_OwnerID;
+        private System.Windows.Forms.Button btn_Back;
     }
 }

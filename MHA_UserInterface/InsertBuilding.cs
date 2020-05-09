@@ -15,7 +15,8 @@ namespace MHA_UserInterface
     public partial class InsertBuilding : Form
     {
         WelcomPage frmLogin;
-        InsertBuilding building;
+        
+
         public InsertBuilding(WelcomPage objLogin)
         {
 

@@ -36,6 +36,7 @@
             this.txt_Name = new System.Windows.Forms.TextBox();
             this.txt_City = new System.Windows.Forms.TextBox();
             this.txt_StreetAddress = new System.Windows.Forms.TextBox();
+            this.btn_Back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_Update
@@ -167,11 +168,22 @@
             this.txt_StreetAddress.Size = new System.Drawing.Size(100, 20);
             this.txt_StreetAddress.TabIndex = 29;
             // 
+            // btn_Back
+            // 
+            this.btn_Back.Location = new System.Drawing.Point(12, 250);
+            this.btn_Back.Name = "btn_Back";
+            this.btn_Back.Size = new System.Drawing.Size(236, 23);
+            this.btn_Back.TabIndex = 50;
+            this.btn_Back.Text = "Back to main update form";
+            this.btn_Back.UseVisualStyleBackColor = true;
+            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
+            // 
             // Update_Mortgager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(259, 251);
+            this.ClientSize = new System.Drawing.Size(259, 281);
+            this.Controls.Add(this.btn_Back);
             this.Controls.Add(this.lbl_PhoneNumber);
             this.Controls.Add(this.lbl_PostalCode);
             this.Controls.Add(this.lbl_State);
@@ -187,11 +199,10 @@
             this.Controls.Add(this.txt_City);
             this.Controls.Add(this.txt_StreetAddress);
             this.Controls.Add(this.btn_Update);
-            this.MaximumSize = new System.Drawing.Size(275, 290);
-            this.MinimumSize = new System.Drawing.Size(275, 290);
+            this.MaximumSize = new System.Drawing.Size(275, 320);
+            this.MinimumSize = new System.Drawing.Size(275, 320);
             this.Name = "Update_Mortgager";
             this.Text = "Update_Mortgager";
-            this.Load += new System.EventHandler(this.Update_Mortgager_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,5 +225,6 @@
         private System.Windows.Forms.TextBox txt_Name;
         private System.Windows.Forms.TextBox txt_City;
         private System.Windows.Forms.TextBox txt_StreetAddress;
+        private System.Windows.Forms.Button btn_Back;
     }
 }
